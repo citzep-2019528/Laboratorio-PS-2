@@ -1,0 +1,281 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ProyectoBim1",
+    "dateExported": "2024-02-23T00:06:35.460Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "category",
+            "containerId": "",
+            "created": "2024-02-22T05:10:37.773Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "product",
+            "containerId": "",
+            "created": "2024-02-22T22:23:58.452Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e08a9a39-49d0-4edd-ba7d-df7fa8375c2d",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "test",
+            "url": "/category/test",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-22T05:11:50.172Z",
+            "modified": "2024-02-22T22:12:40.542Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "38bdc92d-47bb-4079-b9d2-6106dbe3378d",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "test",
+            "url": "/product/test",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-22T22:23:58.452Z",
+            "modified": "2024-02-22T23:19:59.770Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "84180814-4b21-4327-b983-ac366affe2af",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "new",
+            "url": "/category/new",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-22T05:22:56.404Z",
+            "modified": "2024-02-22T23:57:42.568Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "ad"
+                    },
+                    {
+                        "name": "description",
+                        "value": "sfdsgdh"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "eb9097c4-c0de-4147-90b5-5988bf776744",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "new",
+            "url": "/product/new",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-22T22:23:58.453Z",
+            "modified": "2024-02-22T23:29:42.401Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Pepsi"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Bebida"
+                    },
+                    {
+                        "name": "price",
+                        "value": "5.00"
+                    },
+                    {
+                        "name": "stock",
+                        "value": "10"
+                    },
+                    {
+                        "name": "category",
+                        "value": "65d6da69ab2cf490922dce09"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "02923daa-81b7-49a3-b872-82c6a68f46f7",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "update",
+            "url": "/category/update/65d6da69ab2cf490922dce09",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-22T22:12:06.774Z",
+            "modified": "2024-02-22T22:14:25.511Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "a"
+                    },
+                    {
+                        "name": "description",
+                        "value": "e"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "d2534a14-e6da-4b84-b49f-205f59fd603e",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "update",
+            "url": "/product/update/65d7d8e60e796a11eb195e52",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-22T22:23:58.454Z",
+            "modified": "2024-02-22T23:30:17.337Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Mirinda"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9fcc70ec-53ba-4a49-971b-3bd876e61e08",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "search",
+            "url": "/category/search",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-02-22T22:15:07.557Z",
+            "modified": "2024-02-22T23:38:38.539Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "a"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4c6d628e-8a1b-4a59-ae06-11ae2387059f",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "search",
+            "url": "/product/search",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-02-22T22:23:58.455Z",
+            "modified": "2024-02-22T23:38:13.535Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "Mirinda"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5e533c50-d571-4283-b9c4-de995be33c5b",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "see",
+            "url": "/category/see",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-22T22:17:32.961Z",
+            "modified": "2024-02-22T22:21:05.509Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "38136e58-e57d-4219-aca6-ac951703958f",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "see",
+            "url": "/product/see",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-22T22:23:58.456Z",
+            "modified": "2024-02-22T23:30:48.014Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "14513604-0d86-466a-bb61-80322807f331",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "2380d12d-b410-4517-bce4-4cecf91f1856",
+            "name": "delete",
+            "url": "/category/delete/65d7c69e68f93fb952e7610f",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-02-22T22:17:48.194Z",
+            "modified": "2024-02-23T00:04:17.082Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "639f669e-820a-42ba-b91c-f6a4302f036c",
+            "colId": "07fb0a7a-8c93-418b-8f9b-a2336600506b",
+            "containerId": "50568954-da7a-430b-921b-b96bded4374c",
+            "name": "delete",
+            "url": "/product/delete/65d7d8e60e796a11eb195e52",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-02-22T22:23:58.457Z",
+            "modified": "2024-02-22T23:55:36.203Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2656"
+        }
+    }
+}
