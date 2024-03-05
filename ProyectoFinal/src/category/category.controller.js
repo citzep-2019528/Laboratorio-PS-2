@@ -14,7 +14,7 @@ export const newCategory =async(req, res)=>{
         let data = req.body
         let category = new Category(data)
         await category.save()
-        return res.send({message: `Registered succesfully, can be logged with name ${category.name}`})
+        return res.send({message: `Registered succesfully ${category.name}`})
     } catch (err) {
         console.error(err)
         return res.status(500).send({message:'Error registering category', err: err})

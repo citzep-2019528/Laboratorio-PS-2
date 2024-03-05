@@ -14,7 +14,7 @@ export const newProduct =async(req, res)=>{
         let data = req.body
         let product = new Product(data)
         await product.save()
-        return res.send({message: `Registered succesfully, can be logged with name ${product.name}`})
+        return res.send({message: `Registered succesfully ${product.name}`})
     } catch (err) {
         console.error(err)
         return res.status(500).send({message:'Error registering product', err: err})
