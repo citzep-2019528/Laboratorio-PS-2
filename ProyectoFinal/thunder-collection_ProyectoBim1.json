@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ProyectoBim1",
-    "dateExported": "2024-03-07T05:17:27.204Z",
+    "dateExported": "2024-03-07T06:09:31.456Z",
     "version": "1.1",
     "folders": [
         {
@@ -570,6 +570,30 @@
                     {
                         "name": "quantity",
                         "value": "2"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "85b698aa-4d9a-4b32-a884-2f519b349e51",
+            "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
+            "containerId": "a21492f5-3608-49e9-a21b-973bd93cad79",
+            "name": "searchCategory",
+            "url": "/product/category",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2024-03-07T06:03:26.088Z",
+            "modified": "2024-03-07T06:04:44.567Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "search",
+                        "value": "65e9491f0a4c6d393dabd9b2"
                     }
                 ]
             },

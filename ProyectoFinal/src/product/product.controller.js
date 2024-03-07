@@ -59,6 +59,32 @@ export const search = async (req, res)=>{
         let {search} = req.body
         let product = await Product.find(
             {name: search}
+        ).populate('category')
+        if(!product) return res.status(404).send({menssage: 'product not found'})
+        return res.send({menssage: 'Product found', product})
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({message:'Error searching product'})
+    }
+}
+
+//catalogo
+export const seeProduct = async (req, res) => {
+    try {
+        let product = await Product.find().populate('category')
+        return res.send(product)
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({message: 'Error '})
+    }
+}
+
+//Buscar por categoria
+export const searchCategoy = async (req, res)=>{
+    try {
+        let {search} = req.body
+        let product = await Product.find(
+            {category: search}
         )
         if(!product) return res.status(404).send({menssage: 'product not found'})
         return res.send({menssage: 'Product found', product})
@@ -68,13 +94,3 @@ export const search = async (req, res)=>{
     }
 }
 
-//Obtener
-export const seeProduct = async (req, res) => {
-    try {
-        let product = await Product.find()
-        return res.send(product)
-    } catch (err) {
-        console.error(err)
-        return res.status(500).send({message: 'Error '})
-    }
-}
