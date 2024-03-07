@@ -94,3 +94,16 @@ export const searchCategoy = async (req, res)=>{
     }
 }
 
+//producto agotado
+export const souldOut = async (req, res)=>{
+    try {
+        let data = await Product.findOne(
+            { stock: 0 }
+        )
+        if (!data) return res.status(404).send({ message: "product not found" })
+        return res.send({ data })
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({message:'Error'})
+    }
+}

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "ProyectoBim1",
-    "dateExported": "2024-03-07T06:09:31.456Z",
+    "dateExported": "2024-03-07T06:46:18.232Z",
     "version": "1.1",
     "folders": [
         {
@@ -551,7 +551,7 @@
             "method": "POST",
             "sortNum": 200000,
             "created": "2024-03-07T04:50:15.501Z",
-            "modified": "2024-03-07T05:06:21.326Z",
+            "modified": "2024-03-07T06:38:59.194Z",
             "headers": [
                 {
                     "name": "authorization",
@@ -565,14 +565,15 @@
                 "form": [
                     {
                         "name": "product",
-                        "value": "65e94a6bfbc92ac1635581ca"
+                        "value": "65e9494e0a4c6d393dabd9b5"
                     },
                     {
                         "name": "quantity",
-                        "value": "2"
+                        "value": "6"
                     }
                 ]
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -597,6 +598,20 @@
                     }
                 ]
             },
+            "tests": []
+        },
+        {
+            "_id": "1a4c8cdc-04f0-4729-93d6-b723c16db791",
+            "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
+            "containerId": "a21492f5-3608-49e9-a21b-973bd93cad79",
+            "name": "souldOut",
+            "url": "/product/souldOut",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-03-07T06:37:36.566Z",
+            "modified": "2024-03-07T06:43:10.549Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ],
