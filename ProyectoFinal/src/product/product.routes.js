@@ -2,7 +2,7 @@
 
 import { Router } from "express"
 import { deleteP, newProduct, search, seeProduct, test, update } from "./product.controller.js"
-import { isAdmin, validateJwt } from "../midleware/validate-jwt.js"
+import { isAdmin, validateJwt } from "../middleware/validate-jwt.js"
 
 const api = Router()
 

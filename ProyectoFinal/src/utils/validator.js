@@ -20,10 +20,10 @@ export const checkPassword = async (password, hash) => {
         return err
     }
 }
-
-export const checkUpdate = (data, userId)=>{
-    if(userId){
-        if(
+//Cliente
+export const checkUpdate = (data, userId) => {
+    if (userId) {
+        if (
             Object.entries(data).length === 0 ||
             data.password ||
             data.password == '' ||
@@ -33,36 +33,36 @@ export const checkUpdate = (data, userId)=>{
             return false
         }
         return true
-    }else{
-        if(
+    } else {
+        if (
             Object.entries(data).length === 0 ||
-            data.keeper ||
-            data.keeper == ''
+            data.category ||
+            data.category == ''
         ) {
             return false
         }
         return true
     }
-}
+}  
 
-export const checkUpdateC = (data, Id)=>{
-    if(Id){
-        if(Object.entries(data).length === 0){
+    export const checkUpdateC = (data, Id) => {
+        if (Id) {
+            if (Object.entries(data).length === 0) {
+                return false
+            }
+            return true
+        } else {
             return false
         }
-        return true
-    }else{
-        return false
     }
-}
 
-export const checkUpdateP = (data, Id)=>{
-    if(Id){
-        if(Object.entries(data).length === 0){
+    export const checkUpdateP = (data, Id) => {
+        if (Id) {
+            if (Object.entries(data).length === 0) {
+                return false
+            }
+            return true
+        } else {
             return false
         }
-        return true
-    }else{
-        return false
     }
-}

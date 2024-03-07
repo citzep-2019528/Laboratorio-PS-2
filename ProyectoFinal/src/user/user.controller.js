@@ -2,7 +2,7 @@
 
 
 import User from './user.model.js'
-import { encrypt, checkPassword, checkUpdate} from '../utils/validator.js'
+import { encrypt, checkPassword, checkUpdate } from '../utils/validator.js'
 import { generateJwt } from '../utils/jwt.js'
 
 
@@ -106,29 +106,77 @@ export const login = async (req, res) => {
 }
 
 //update
-export const updateC = async(req, res)=>{
-    try{
+export const update = async (req, res) => {
+    try {
         let { id } = req.params
         let data = req.body
+        let rol = req.user.role
         let uid = req.user._id
-        let update = checkUpdate(data, id)
-        if(id != uid){
-            return res.send({ message: 'It not your account'})
+        //let {passwordOld} =  req.body
+        //let {passwordNew} = req.body
+        if (rol === 'CLIENT') {
+            let update = checkUpdate(data, id)
+            /*if(!passwordOld){
+                return res.status(404).send({ message: 'Incorrect password'})
+            }*/
+            if (id != uid) return res.status(401).send({ message: 'This account does not belong to you' })
+            if (!update) return res.status(400).send({ message: 'Have submitted some data that cannot be updated or missing data' })
+            let updatedUser = await User.findOneAndUpdate(
+                { _id: uid },
+                data,
+                { new: true }
+            )
+            if (!updatedUser) return res.status(401).send({ message: 'User not found and not updated' })
+            return res.send({ message: 'Updated user', updatedUser })
+        } else if (rol === 'ADMIN') {
+            let update = checkUpdate(data, id)
+            if (!update) return res.status(400).send({ message: 'Have submitted some data that cannot be updated or missing data' })
+            let updatedUser = await User.findOneAndUpdate(
+                { _id: id },
+                data,
+                { new: true }
+            )
+            if (!updatedUser) return res.status(401).send({ message: 'User not found and not updated' })
+            return res.send({ message: 'Updated user', updatedUser })
+
         }
-        if(!update) return res.status(400).send({message: 'Have submitted some data that cannot be updated or missing data'})
-        let updatedUser = await User.findOneAndUpdate(
-            {_id: uid},
-            data,
-            {new: true}
-        )
-        if(!updatedUser) return res.status(401).send({message: 'User not found and not updated'})
-        return res.send({message: 'Updated user', updatedUser})
-    }catch(err){
+
+    } catch (err) {
         console.error(err)
-        if(err.keyValue.username) return res.status(400).send({message: `Username ${err.keyValue.username} is alredy authorization`})
-        return res.status(500).send({message: 'Error updating account'})
+        return res.status(500).send({ message: 'Error updating account' })
     }
 }
 
+//delete
+export const deleteClient = async (req, res) => {
+    try {
+        let { id } = req.params
+        let { validate } = req.body
+        let uid = req.user._id
+        if (!validate) return res.status(400).send({ message: 'Write authorization word' });
+        if (validate !== 'DELETE') return res.status(400).send({ message: 'Authorization word = DELETE' });
+        if(id != uid) return  res.status(401).send({ message: 'This is not your account' })
+        let deletedUser = await User.findOneAndDelete({ _id: uid })
+        if (!deletedUser) return res.status(404).send({ message: 'Account not found and not deleted' })
+        return res.send({ message: `Account with username ${deletedUser.username} deleted successfully` })
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({ message: 'Error deleting account' })
+    }
+}
 
+export const deleteAdmin = async (req, res)=>{
+    try {
+        let { id } = req.params
+        let { validate} = req.body
+        if (!validate) return res.status(400).send({ message: 'Write authorization word' });
+        if (validate !== 'DELETE') return res.status(400).send({ message: 'Authorization word = DELETE' });
+        let deletedUser = await User.findOneAndDelete({_id: id}) 
+        if(!deletedUser) return res.status(404).send({message: 'Account not found and not deleted'})
+        return res.send({message: `Account with username ${deletedUser.username} deleted successfully`})
+    } catch (err) {
+        console.error(err)
+    return res.status(500).send({ message: 'Error deleting account' })
+    }
+}
 
