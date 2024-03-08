@@ -58,7 +58,7 @@ export const search = async (req, res)=>{
     try {
         let {search} = req.body
         let product = await Product.find(
-            {name: search}
+            {name: {$regex: search, $options:'i'}}
         ).populate('category')
         if(!product) return res.status(404).send({menssage: 'product not found'})
         return res.send({menssage: 'Product found', product})
@@ -97,7 +97,7 @@ export const searchCategoy = async (req, res)=>{
 //producto agotado
 export const souldOut = async (req, res)=>{
     try {
-        let data = await Product.findOne(
+        let data = await Product.find(
             { stock: 0 }
         )
         if (!data) return res.status(404).send({ message: "product not found" })

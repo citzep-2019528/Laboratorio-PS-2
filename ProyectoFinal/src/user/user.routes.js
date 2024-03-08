@@ -6,7 +6,8 @@ import {
         registerA, 
         registerC, 
         test, 
-        update} from './user.controller.js'
+        update,
+        viewShopping} from './user.controller.js'
 import { isAdmin, validateJwt } from '../middleware/validate-jwt.js'
 
 const api = express.Router()
@@ -17,6 +18,7 @@ api.post('/login', login)
 api.put('/updateCliente', update)
 api.post('/register', registerC)
 api.delete('/delete/:id', [validateJwt], deleteClient)
+api.get('/bill',[validateJwt], viewShopping)
 
 api.put('/update/:id', [validateJwt], update)
 

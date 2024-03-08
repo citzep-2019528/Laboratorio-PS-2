@@ -2,6 +2,7 @@
 
 
 import User from './user.model.js'
+import Bill from '../bill/bill.model.js'
 import { encrypt, checkPassword, checkUpdate } from '../utils/validator.js'
 import { generateJwt } from '../utils/jwt.js'
 
@@ -177,6 +178,17 @@ export const deleteAdmin = async (req, res)=>{
     } catch (err) {
         console.error(err)
     return res.status(500).send({ message: 'Error deleting account' })
+    }
+}
+
+//ver compras
+export const viewShopping= async (req, res)=>{
+    try {
+        let bill = await Bill.find()
+        return res.send(bill)
+    } catch (err) {
+        console.error(err)
+        return res.status(500).send({message:'Error'})
     }
 }
 

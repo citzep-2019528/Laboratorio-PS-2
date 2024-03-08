@@ -36,7 +36,7 @@ export const newBill = async (req, res)=>{
         
 
         await newBill.save()
-        await Cart.findOneAndDelete({ user: uid })
+        await Cart.updateOne({ client: uid},{$set:{products:[]} }, {total : null})
         return res.status(200).send({ message: 'generating bill' })
     } catch (err) {
         console.error(err);
@@ -48,28 +48,30 @@ export const generatingBill = async (req, res)=>{
     try{
         let uid = req.user._id
         let bill = await Bill.findOne({ user: uid }).populate('user').populate('products.product')
+        let date = new Date().toLocaleDateString('en-US',{timeZone: 'UTC'})
+        let product = await Product.findOne()
         if (!bill) {
             return res.status(404).send({ message: 'bill not found' })
         }
         let doc = new pdf()
-        const filePath = path.resolve('bill.pdf')
+        const filePath = path.resolve(`bill_${uid}.pdf`)
         doc.pipe(fs.createWriteStream(filePath))
-        doc.fontSize(14)
-        doc.text('BILL', { aling: 'center' });
-        doc.moveDown();
+        doc.fontSize(16).font('Helvetica-Bold').text(`Factura No. ${bill._id}`)
+        doc.moveDown()
 
-        doc.text(`Date: ${bill.date}`, { align: 'right' })
-        doc.text(`Client: ${bill.user.name}`, { align: 'left' })
-        doc.moveDown();
+        doc.fontSize(10).font('Helvetica').text(`Date: ${date}`, { align: 'right' })
+        doc.fontSize(12).font('Helvetica').text(`Client: ${bill.user.name}`, { align: 'left' })
+        doc.moveDown()
 
-        doc.text('Products');
+        doc.fontSize(14).font('Helvetica-Bold').text('Products           |            Cantidad           |            Precio');
         doc.moveDown()
         bill.products.forEach((products, index) => {
-            doc.text(`${index + 1}, ${products.product.name} - Cantidad: ${products.quantity}` )
+            doc.fontSize(12).font('Helvetica').text(`${index + 1}. ${products.product.name}                                        ${products.quantity}                                       Q.${product.price}`)
         });
 
         doc.moveDown();
-        doc.text(`Total: Q${bill.total}`);
+        doc.fontSize(14).font('Helvetica-Bold').text('____________________________________________________________');
+        doc.fontSize(14).font('Helvetica').text(`Total: ---------------------------------------------------------- Q${bill.total}`);
         doc.end();
         res.sendFile(filePath);
         return res.send({message: 'Generating bill'})
