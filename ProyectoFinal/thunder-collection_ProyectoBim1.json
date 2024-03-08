@@ -1,9 +1,16 @@
 {
     "client": "Thunder Client",
     "collectionName": "ProyectoBim1",
-    "dateExported": "2024-03-07T06:46:18.232Z",
+    "dateExported": "2024-03-08T08:08:16.564Z",
     "version": "1.1",
     "folders": [
+        {
+            "_id": "75bef34e-4c7b-4b34-b4a3-a8e78e2912a3",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-03-06T01:52:28.868Z",
+            "sortNum": 5000
+        },
         {
             "_id": "1ad1e8f4-dbd2-4a44-a9e1-26626446445b",
             "name": "category",
@@ -19,21 +26,40 @@
             "sortNum": 20000
         },
         {
-            "_id": "75bef34e-4c7b-4b34-b4a3-a8e78e2912a3",
-            "name": "user",
-            "containerId": "",
-            "created": "2024-03-06T01:52:28.868Z",
-            "sortNum": 30000
-        },
-        {
             "_id": "b8ffb6ff-e3d3-4e42-ba8e-bc71d92e50f0",
             "name": "ShoppingCart",
             "containerId": "",
             "created": "2024-03-07T04:50:09.888Z",
             "sortNum": 40000
+        },
+        {
+            "_id": "1369d635-ec69-4594-97f8-3477b1e69d9f",
+            "name": "Bill",
+            "containerId": "",
+            "created": "2024-03-08T03:39:34.617Z",
+            "sortNum": 50000
         }
     ],
     "requests": [
+        {
+            "_id": "9b2aac4c-192d-46a7-9bff-dce5c15e8e58",
+            "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
+            "containerId": "1369d635-ec69-4594-97f8-3477b1e69d9f",
+            "name": "bill",
+            "url": "/bill/newBill",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-08T03:40:02.904Z",
+            "modified": "2024-03-08T05:30:14.285Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg3NTE5NiwiZXhwIjoxNzA5ODg1OTk2fQ.k39YfXFw452RPcYpSNiKJ2UUuSheMIPRJ4ES0vFCVZc"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
         {
             "_id": "ddcedd3b-54f8-48f1-a708-8ef7107b67d3",
             "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
@@ -71,11 +97,11 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T01:52:28.868Z",
-            "modified": "2024-03-07T04:57:03.783Z",
+            "modified": "2024-03-08T07:50:44.161Z",
             "headers": [
                 {
                     "name": "authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTc4NzM4NSwiZXhwIjoxNzA5Nzk4MTg1fQ.BJvDXr2_PRFouLky3VPwxUa7RcbeUFPbg5JWcOz7rSc"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg4NDIzNiwiZXhwIjoxNzA5ODk1MDM2fQ.J2kfRN1SN2IXuuSUz2ZDL11gqUApqlXBcZnPPbXrNaw"
                 }
             ],
             "params": [],
@@ -85,7 +111,7 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Bebidas"
+                        "value": "aassa"
                     },
                     {
                         "name": "description",
@@ -105,11 +131,11 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-03-06T01:52:28.874Z",
-            "modified": "2024-03-07T05:02:35.694Z",
+            "modified": "2024-03-08T08:05:49.057Z",
             "headers": [
                 {
                     "name": "authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTc4NzM4NSwiZXhwIjoxNzA5Nzk4MTg1fQ.BJvDXr2_PRFouLky3VPwxUa7RcbeUFPbg5JWcOz7rSc"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg4NDIzNiwiZXhwIjoxNzA5ODk1MDM2fQ.J2kfRN1SN2IXuuSUz2ZDL11gqUApqlXBcZnPPbXrNaw"
                 }
             ],
             "params": [],
@@ -119,7 +145,7 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Mirinda"
+                        "value": "asa"
                     },
                     {
                         "name": "description",
@@ -135,7 +161,7 @@
                     },
                     {
                         "name": "category",
-                        "value": "65e9491f0a4c6d393dabd9b2"
+                        "value": "65eac6c444f3695d918e3aaf"
                     }
                 ]
             },
@@ -180,12 +206,17 @@
             "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
             "containerId": "a21492f5-3608-49e9-a21b-973bd93cad79",
             "name": "update",
-            "url": "/product/update/65d7d8e60e796a11eb195e52",
+            "url": "/product/update/65e9494e0a4c6d393dabd9b5",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-03-06T01:52:28.875Z",
-            "modified": "2024-03-06T01:52:28.875Z",
-            "headers": [],
+            "modified": "2024-03-07T22:51:09.908Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg1MTgyMSwiZXhwIjoxNzA5ODYyNjIxfQ.a5tKCESYIunO9otGrX6v_0n3IsNjhp__2JJXWAfPhO4"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "formencoded",
@@ -193,10 +224,16 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Mirinda"
+                        "value": "Mirinda",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "stock",
+                        "value": "10"
                     }
                 ]
             },
+            "reqType": "put",
             "tests": []
         },
         {
@@ -280,18 +317,19 @@
             "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
             "containerId": "1ad1e8f4-dbd2-4a44-a9e1-26626446445b",
             "name": "delete",
-            "url": "/category/delete/65e5f6160cedf36248d4f86b",
+            "url": "/category/delete/65eac6c444f3695d918e3aaf",
             "method": "DELETE",
             "sortNum": 70000,
             "created": "2024-03-06T01:52:28.872Z",
-            "modified": "2024-03-06T01:52:28.872Z",
+            "modified": "2024-03-08T08:06:13.936Z",
             "headers": [
                 {
                     "name": "authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU1ZTMxNzg3OWJiOTYwYWIzNzdjOTciLCJ1c2VybmFtZSI6ImNpdHplcCIsIm5hbWUiOiJDaHJpc3RpYW4iLCJzdXJuYW1lIjoiSXR6ZXAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNzA5NTcwNjI3LCJleHAiOjE3MDk1ODE0Mjd9.lWToZL2jDF2oGasesmcWZTCNkY82SkXFNSEcAz7QNaE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg4NDIzNiwiZXhwIjoxNzA5ODk1MDM2fQ.J2kfRN1SN2IXuuSUz2ZDL11gqUApqlXBcZnPPbXrNaw"
                 }
             ],
             "params": [],
+            "reqType": "del",
             "tests": []
         },
         {
@@ -551,11 +589,11 @@
             "method": "POST",
             "sortNum": 200000,
             "created": "2024-03-07T04:50:15.501Z",
-            "modified": "2024-03-07T06:38:59.194Z",
+            "modified": "2024-03-08T05:20:15.230Z",
             "headers": [
                 {
                     "name": "authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTc4NzM4NSwiZXhwIjoxNzA5Nzk4MTg1fQ.BJvDXr2_PRFouLky3VPwxUa7RcbeUFPbg5JWcOz7rSc"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg3NTE5NiwiZXhwIjoxNzA5ODg1OTk2fQ.k39YfXFw452RPcYpSNiKJ2UUuSheMIPRJ4ES0vFCVZc"
                 }
             ],
             "params": [],
@@ -569,7 +607,7 @@
                     },
                     {
                         "name": "quantity",
-                        "value": "6"
+                        "value": "2"
                     }
                 ]
             },
@@ -611,6 +649,25 @@
             "created": "2024-03-07T06:37:36.566Z",
             "modified": "2024-03-07T06:43:10.549Z",
             "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "94d72bf3-a204-4d2c-b635-0dfdface223c",
+            "colId": "ea9f0f40-3d0d-4617-b913-47bcf184f48b",
+            "containerId": "1369d635-ec69-4594-97f8-3477b1e69d9f",
+            "name": "generating",
+            "url": "/bill/generating",
+            "method": "GET",
+            "sortNum": 240000,
+            "created": "2024-03-08T07:19:15.802Z",
+            "modified": "2024-03-08T07:19:56.430Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU5MTE1Y2ZiNzM0NDE5NWRiMTY2N2QiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImRlZmF1bHQiLCJzdXJuYW1lIjoiZGVmYXVsdCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcwOTg4MjM4MywiZXhwIjoxNzA5ODkzMTgzfQ.tE9nluj3PynYI_NrKAFyK8onbcGcu6My859xsOozVBE"
+                }
+            ],
             "params": [],
             "tests": []
         }

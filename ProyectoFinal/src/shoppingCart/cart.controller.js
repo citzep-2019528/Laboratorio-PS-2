@@ -17,19 +17,28 @@ export const newCart =  async (req, res)=>{
         if(!items){
             return res.status(404).send({message: 'Product not found'})
         }
-        if(parseInt(items.stock) < parseInt(quantity)){
+        if(items.stock < quantity){
             return res.status(404).send({message: 'Insufficient products'})
         }
-        items.stock = parseInt(items.stock) - parseInt(quantity)
+        items.stock = items.stock - quantity
         await items.save()
 
         let existence = rasho.products.findIndex(item => item.product.toString()===product.toString())
         if (existence !== -1){
             rasho.products[existence].quantity += parseInt(quantity)
         }else{
-            rasho.products.push({product: product, quantity})
+            rasho.products.push({product: product, quantity: parseInt(quantity)})
         }
 
+        let total = 0;
+        for (let item of rasho.products) {
+            let product = await Product.findById(item.product);
+            if(product){
+                total += product.price * item.quantity
+            }
+        }
+        rasho.total=total
+        
         await rasho.save()
         return res.send({message: 'Has been successfully added to the shopping cart'})
     } catch (err) {

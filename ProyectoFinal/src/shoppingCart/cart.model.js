@@ -17,7 +17,11 @@ const cartSchema = Schema({
             required: true,
             default: 1
         }
-    }]
+    }],
+    total:{
+        type: Number,
+        required: true
+    }
 })
 
 export default model('cart', cartSchema)

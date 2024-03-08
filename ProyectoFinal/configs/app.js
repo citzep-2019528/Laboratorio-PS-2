@@ -8,6 +8,7 @@ import categoryRoutes from '../src/category/category.routes.js'
 import productRoutes from '../src/product/product.routes.js'
 import userRoutes from '../src/user/user.routes.js'
 import cartRoutes from '../src/shoppingCart/cart.routes.js'
+import billRoutes from '../src/bill/bill.routes.js'
 
 
 const app = express()
@@ -25,6 +26,7 @@ app.use('/category', categoryRoutes)
 app.use('/product', productRoutes)
 app.use('/user', userRoutes)
 app.use('/cart', cartRoutes)
+app.use('/bill', billRoutes)
 
 
 export const initServer = ()=>{
